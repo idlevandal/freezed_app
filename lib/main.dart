@@ -63,7 +63,7 @@ class MyApp extends StatelessWidget {
 }
 
 class Root extends ConsumerWidget {
-  final completedIcon = Icon(Icons.done, color: Colors.green);
+  final completedIcon = Icon(Icons.done, color: Colors.greenAccent);
   final incompleteIcon = Icon(Icons.close, color: Colors.red);
 
   @override
@@ -77,7 +77,7 @@ class Root extends ConsumerWidget {
               print('all pressed');
               ref.read(todoListFilter.state).state = TodoListFilter.all;
             },
-            icon: Icon(Icons.all_inclusive),
+            icon: Text('ALL'),
           ),
           IconButton(
             onPressed: () {
