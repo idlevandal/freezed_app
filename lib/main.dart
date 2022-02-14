@@ -74,21 +74,15 @@ class Root extends ConsumerWidget {
       appBar: AppBar(
         actions: [
           IconButton(
-            onPressed: () {
-              ref.read(todoListFilter.state).state = TodoListFilter.all;
-            },
+            onPressed: () => ref.read(todoListFilter.state).state = TodoListFilter.all,
             icon: Text('ALL'),
           ),
           IconButton(
-            onPressed: () {
-              ref.read(todoListFilter.state).state = TodoListFilter.completed;
-            },
+            onPressed: () => ref.read(todoListFilter.state).state = TodoListFilter.completed,
             icon: completedIcon,
           ),
           IconButton(
-            onPressed: () {
-              ref.read(todoListFilter.state).state = TodoListFilter.incomplete;
-            },
+            onPressed: () => ref.read(todoListFilter.state).state = TodoListFilter.incomplete,
             icon: incompleteIcon,
           ),
         ],
